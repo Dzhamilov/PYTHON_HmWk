@@ -5,28 +5,35 @@
 # Он называет сумму этих чисел S и их произведение P. 
 # Помогите Кате отгадать задуманные Петей числа.
 
-import math
+# import math
  
 
-S = int(input('Введите сумму задуманного числа: '))
-P = int(input('Введите произведение задуманного числа: '))
-# x + y = S
-# x * y = P
-# x = S - y
-# (S - y) * y = P
-# Sy - y^2 = P
-# -y^2 + Sy - P = 0
-b = S
-c = P
-a = 1
-# ay^2 - by + c = 0
-discr = b ** 2 - 4 * a * c
-if discr > 0:
-    y1 = (b + math.sqrt(discr)) / (2 * a)
-    y2 = (b - math.sqrt(discr)) / (2 * a)
-    print(y1,  y2)
-elif discr == 0:
-    y1 = -b / (2 * a)
-    print(y1)
-else:
-    print("Корней нет")
+# S = int(input('Введите сумму задуманного числа: '))
+# P = int(input('Введите произведение задуманного числа: '))
+# # x + y = S
+# # x * y = P
+# # x = S - y
+# # (S - y) * y = P
+# # Sy - y^2 = P
+# # -y^2 + Sy - P = 0
+# b = S
+# c = P
+# a = 1
+# # ay^2 - by + c = 0
+# discr = b ** 2 - 4 * a * c
+# if discr > 0:
+#     y1 = (b + math.sqrt(discr)) / (2 * a)
+#     y2 = (b - math.sqrt(discr)) / (2 * a)
+#     print(y1,  y2)
+# elif discr == 0:
+#     y1 = -b / (2 * a)
+#     print(y1)
+# else:
+#     print("Корней нет")
+
+x = int(input('x'))
+y = int(input('y'))
+for i in range(x):
+    for j in range(y):
+        if x == i + j and y == i * j:
+            print(i, j)
